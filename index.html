@@ -3,9 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Intro to JavaScript Assignment</title>
 </head>
 <body>
-    <h1>Hello World!</h1>
+    <label for= "languageInput">
+        What language was created to add interactivity to the Web? :
+    </label>
+    <input type="text" id="languageInput">
+    <button onclick="showInputValue()">Show Value</button>
 </body>
 </html>
+
+<script>
+    // Function to get and display the value entered in the input field
+    function showInputValue() {
+        let languageInput = document.querySelector("#languageInput");
+        alert("You entered: " + languageInput.value);
+    }
+    // Getting input from the user and checking the value with if statements
+    let prefLibrary = prompt("What code library would you prefer? (Vue, React or jQuery)");
+    if (prefLibrary == "Vue" || prefLibrary == "React" || prefLibrary == "jQuery") {
+        alert("You chose " + prefLibrary)
+    }
+    else {
+        alert("Invalid library selection. Please try again.");
+    }
+</script>
